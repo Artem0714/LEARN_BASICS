@@ -6,9 +6,16 @@ class Man {
         this._name = name;
         this._age = age;
     }
+
+    //создадим метод для полиморфной работы
+
+    public greeting {
+        console.log('Привет я человек и меня зовут ${this._firstName}');
+    }
+
 }
 
-class Worker {
+class Worker extends Man{
     private _inn;
     private _snils;
 
@@ -17,4 +24,9 @@ class Worker {
         this._inn = inn;
         this._snils = snils;
     }
+
+    public greeting {
+        console.log('Привет я работник и меня зовут ${this._firstName}');
+    }
+
 }
